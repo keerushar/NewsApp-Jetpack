@@ -1,5 +1,6 @@
 package com.rushar.newsapp.presentation.onboarding
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,12 +19,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.rushar.newsapp.presentation.Dimens.MediumPadding2
 import com.rushar.newsapp.presentation.common.NewsButton
 import com.rushar.newsapp.presentation.common.NewsTextButton
 import com.rushar.newsapp.presentation.onboarding.components.OnBoardingPage
 import com.rushar.newsapp.presentation.onboarding.components.PageIndicator
+import com.rushar.newsapp.ui.theme.NewsAppTheme
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
@@ -88,3 +91,13 @@ fun OnBoardingScreen() {
         Spacer(modifier = Modifier.weight(0.5f))
     }
 }
+
+@Preview(showBackground = true)
+@Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
+@Composable
+fun OnBoardingScreenPreview() {
+    NewsAppTheme {
+        OnBoardingScreen()
+    }
+}
+
