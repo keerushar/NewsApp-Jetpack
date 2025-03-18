@@ -11,7 +11,7 @@ import com.rushar.newsapp.utils.Constants
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-class LocalUserMangerImpl(
+class LocalUserManagerImpl(
     private val context: Context
 ) : LocalUserManager {
 

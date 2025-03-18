@@ -3,11 +3,12 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
 }
 
 android {
     namespace 'com.rushar.newsapp'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.rushar.newsapp"
