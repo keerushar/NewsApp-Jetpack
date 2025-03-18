@@ -38,13 +38,16 @@ fun OnBoardingPage(
             contentDescription = null,
             contentScale = ContentScale.Crop
         )
+
         Spacer(modifier = Modifier.height(MediumPadding1))
+
         Text(
             text = page.title,
             modifier = Modifier.padding(horizontal = MediumPadding2),
             style = MaterialTheme.typography.h5.copy(fontWeight = FontWeight.Bold),
             color = colorResource(id = R.color.black)
         )
+
         Text(
             text = page.description,
             modifier = Modifier.padding(horizontal = MediumPadding2),
@@ -57,7 +60,7 @@ fun OnBoardingPage(
 @Preview(showBackground = true)
 @Preview(uiMode = UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
-fun onBoardingPagePreview() {
+fun OnBoardingPagePreview() {
     NewsAppTheme {
         OnBoardingPage(page = pages[0])
     }

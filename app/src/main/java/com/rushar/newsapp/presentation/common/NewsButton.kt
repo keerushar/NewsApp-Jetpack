@@ -8,7 +8,9 @@ import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.rushar.newsapp.ui.theme.NewsAppTheme
 
 @Composable
 fun NewsButton(
@@ -26,6 +28,7 @@ fun NewsButton(
     }
 }
 
+
 @Composable
 fun NewsTextButton(
     text: String,
@@ -33,5 +36,13 @@ fun NewsTextButton(
 ) {
     TextButton(onClick = onClick) {
         Text(text = text, style = MaterialTheme.typography.h5, color = Color.Blue)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun NewsButtonPreview(){
+    NewsAppTheme {
+        NewsButton("Hello There") { }
     }
 }
